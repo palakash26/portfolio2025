@@ -123,7 +123,7 @@ async function initializeVectorStore() {
     );
 
     // Get or create the index
-    const indexName = process.env.PINECONE_INDEX_NAME || "rushikesh-portfolio";
+    const indexName = process.env.PINECONE_INDEX_NAME || "theme";
     console.log(`Using index name: ${indexName}`);
 
     // List existing indexes
