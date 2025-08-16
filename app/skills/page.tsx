@@ -31,7 +31,6 @@ const skills = {
     { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
   ],
   "Backend & Databases": [
-    { name: "Go", icon: <SiGo className="text-[#00ADD8]" /> },
     { name: "MySQL", icon: <SiMysql className="text-[#4479A1]" /> },
     { name: "PostgreSQL", icon: <SiPostgresql className="text-[#336791]" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
