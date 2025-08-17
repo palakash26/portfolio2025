@@ -103,7 +103,7 @@ export async function queryVectorStore(query: string, k: number = 5) {
     });
 
     // Use environment variable for index name with fallback
-    const indexName = process.env.PINECONE_INDEX_NAME || "rushikesh-portfolio";
+    const indexName = process.env.PINECONE_INDEX_NAME || "Akash";
     const index = pinecone.Index(indexName);
     const embeddings = getEmbeddings();
 
