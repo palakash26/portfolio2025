@@ -176,7 +176,7 @@ async function embedAndStoreThemeStructure() {
       );
     }
     console.log("API keys found.");
-
+    
     // --- 2. Initialize Pinecone Client ---
     const pinecone = new Pinecone({
       apiKey: process.env.PINECONE_API_KEY,
@@ -208,7 +208,7 @@ async function embedAndStoreThemeStructure() {
         spec: {
           serverless: {
             cloud: "aws", // Or your preferred cloud
-            region: "us-east-1", // Or your preferred region
+            region: "eu-north-1", // Or your preferred region
           },
         },
       });
@@ -236,9 +236,8 @@ async function embedAndStoreThemeStructure() {
       // taskType: "RETRIEVAL_DOCUMENT", // Optional: Specify task type if needed by the model/Pinecone
     });
     console.log(
-      `Initialized Google Embedding Model: ${GOOGLE_EMBEDDING_MODEL}`
+      `Initialized Google Embedding Model: ${embeddings.model}`
     );
-
     // --- 6. Prepare Documents ---
     console.log("Splitting page content into chunks...");
     const splitter = new RecursiveCharacterTextSplitter({
@@ -280,6 +279,8 @@ async function embedAndStoreThemeStructure() {
     console.log(
       `Successfully embedded ${documents.length} documents and stored them in the "${INDEX_NAME}" index.`
     );
+    console.log("Loaded PINECONE_API_KEY:", process.env.PINECONE_API_KEY ? "✅ Found" : "❌ Missing");
+console.log("Loaded GOOGLE_API_KEY:", process.env.GOOGLE_API_KEY ? "✅ Found" : "❌ Missing");
   } catch (error) {
     console.error("Error during theme structure embedding:", error);
     if (error instanceof Error) {
