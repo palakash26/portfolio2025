@@ -123,7 +123,7 @@ async function initializeVectorStore() {
     );
 
     // Get or create the index
-    const indexName = process.env.PINECONE_INDEX_NAME || "theme";
+    const indexName = process.env.PINECONE_INDEX_NAME || "akash";
     console.log(`Using index name: ${indexName}`);
 
     // List existing indexes
@@ -143,7 +143,7 @@ async function initializeVectorStore() {
           spec: {
             serverless: {
               cloud: "aws",
-              region: "us-west-1", // Try a different region if this fails
+              region: "eu-north-1", // Try a different region if this fails
             },
           },
         });
@@ -165,7 +165,7 @@ async function initializeVectorStore() {
             spec: {
               serverless: {
                 cloud: "aws",
-                region: "us-east-1", // Try a different region
+                region: "eu-north-1", // Try a different region
               },
             },
           });
