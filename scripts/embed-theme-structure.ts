@@ -11,7 +11,7 @@ import * as path from "path"; // Import path if loading from file
 dotenv.config();
 
 // --- Configuration ---
-const INDEX_NAME = "tesing";
+const INDEX_NAME = "akash";
 const DIMENSION = 768;
 const GOOGLE_EMBEDDING_MODEL = "text-embedding-004"; // Use the latest Google embedding model
 
