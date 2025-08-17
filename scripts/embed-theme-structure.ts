@@ -12,7 +12,7 @@ dotenv.config();
 
 // --- Configuration ---
 const INDEX_NAME = "theme";
-const DIMENSION = 768;
+const DIMENSION = 1024;
 const GOOGLE_EMBEDDING_MODEL = "text-embedding-004"; // Use the latest Google embedding model
 
 // --- Page Content ---
